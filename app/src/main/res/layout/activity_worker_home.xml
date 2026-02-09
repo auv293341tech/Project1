@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_light_gray">
+
+    <!-- Swipe Refresh Layout -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Green Header Section -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_header_gradient"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="100dp">
+
+                <!-- Notification Icon -->
+                <ImageView
+                    android:id="@+id/ivNotifications"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="top|end"
+                    android:src="@drawable/ic_notification_bell"
+                    android:contentDescription="@string/notifications"
+                    android:scaleType="centerInside"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_notification_circle" />
+
+                <!-- Welcome Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/welcome_back"
+                        android:textColor="@color/white_70"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test Worker"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_marginTop="4dp" />
+
+                    <!-- Rating and Jobs Completed -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_star_filled"
+                            android:tint="@color/color_gold"
+                            android:contentDescription="@string/rating" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.8"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:layout_marginStart="6dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/jobs_completed"
+                            android:textColor="@color/white_70"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginStart="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Status Cards -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="80dp"
+                    android:spacing="12dp">
+
+                    <!-- Pending Card -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_status_card_pending"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_clock"
+                                android:tint="@color/white"
+                                android:contentDescription="@string/pending" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pending"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_marginStart="6dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+                    <!-- Accepted Card -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_status_card_accepted"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_check_circle"
+                                android:tint="@color/white"
+                                android:contentDescription="@string/accepted" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/accepted"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_marginStart="6dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+                    <!-- This Month Card -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_status_card_month"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_trending_up"
+                                android:tint="@color/white"
+                                android:contentDescription="@string/this_month" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/this_month"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_marginStart="6dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textColor="@color/white"
+                            android:textSize="32sp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Filter Tabs -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="-60dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:spacing="12dp"
+                    android:background="@drawable/bg_filter_container"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <Button
+                        android:id="@+id/btnFilterAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/all"
+                        android:background="@drawable/bg_filter_btn_active"
+                        android:textColor="@color/white"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
+                        style="?attr/borderlessButtonStyle" />
+
+                    <Button
+                        android:id="@+id/btnFilterPending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/pending"
+                        android:background="@drawable/bg_filter_btn_inactive"
+                        android:textColor="@color/text_dark_gray"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
+                        style="?attr/borderlessButtonStyle" />
+
+                    <Button
+                        android:id="@+id/btnFilterAccepted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/accepted"
+                        android:background="@drawable/bg_filter_btn_inactive"
+                        android:textColor="@color/text_dark_gray"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
+                        style="?attr/borderlessButtonStyle" />
+
+                    <Button
+                        android:id="@+id/btnFilterRejected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/rejected"
+                        android:background="@drawable/bg_filter_btn_inactive"
+                        android:textColor="@color/text_dark_gray"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="14sp"
+                        style="?attr/borderlessButtonStyle" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- Service Requests Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/service_requests"
+                        android:textColor="@color/text_dark"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppins_bold" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnGoPremium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/accept_all"
+                    android:background="@drawable/bg_btn_primary"
+                    android:textColor="@color/white"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="12sp"
+                    style="?attr/borderlessButtonStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 Requests"
+                    android:textColor="@color/color_green"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginStart="12dp" />
+
+            </LinearLayout>
+
+            <!-- RecyclerView for Job Postings -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvJobPostings"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                android:clipToPadding="false" />
+
+            <!-- Empty State -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyState"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="40dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_empty_state"
+                    android:contentDescription="@string/no_jobs"
+                    android:scaleType="centerInside"
+                    android:tint="@color/color_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_jobs_available"
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check_back_later"
+                    android:textColor="@color/text_light_gray"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="@drawable/bottom_nav_text_color"
+        app:itemIconTint="@drawable/bottom_nav_icon_color" />
+
+</LinearLayout>

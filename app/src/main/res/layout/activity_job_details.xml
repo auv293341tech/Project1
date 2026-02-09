@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F9"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===== JOB HEADER CARD ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvJobTitle"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvRecruiterName"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:textColor="#555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:textColor="#555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTimestamp"
+                android:layout_marginTop="4dp"
+                android:textSize="14sp"
+                android:textColor="#555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+
+            <TextView
+                android:id="@+id/tvSkill"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="#2E7D32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Assigned worker (shown only when assigned) -->
+            <TextView
+                android:id="@+id/tvAcceptedBy"
+                android:layout_marginTop="6dp"
+                android:textSize="14sp"
+                android:textColor="#1565C0"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- ===== PROBLEM DETAILS CARD ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:text="Problem Details"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvAnswers"
+                android:layout_marginTop="12dp"
+                android:textSize="15sp"
+                android:textColor="#333"
+                android:lineSpacingExtra="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- ===== ACTION BUTTONS ===== -->
+
+        <!-- Worker -->
+        <LinearLayout
+            android:id="@+id/workerActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnAccept"
+                android:text="Accept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnReject"
+                android:text="Reject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/holo_red_light"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnApply"
+            android:text="Apply for this Job"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Customer -->
+        <Button
+            android:id="@+id/btnViewApplicants"
+            android:text="View Applicants"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:text="Edit Job"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:text="Cancel Job"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

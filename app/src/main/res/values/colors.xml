@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#2196F3</color>
+    <color name="light_blue">#ADD8E6</color>
+    <color name="grey">#757575</color>
+    <color name="light_grey_start">#F5F5F5</color>
+    <color name="light_grey_end">#E0E0E0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_background">#121212</color>
+
+    <!-- Gradient Start Colors for Status Bar -->
+    <color name="orange_dark">#FF6D00</color>
+    <color name="blue_dark">#0D47A1</color>
+    <color name="purple_dark">#4A148C</color>
+    <color name="red_dark">#B71C1C</color>
+    <color name="green_dark">#1B5E20</color>
+    <color name="teal_dark">#004D40</color>
+    <color name="indigo_dark">#1A237E</color>
+
+    <!-- Status Colors -->
+    <color name="green_700">#388E3C</color>
+    <color name="orange_700">#F57C00</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="grey_700">#616161</color>
+
+    <!-- NEW: Green Theme Colors for Worker Home -->
+    <color name="green_primary">#1DBF73</color>
+    <color name="green_primary_dark">#0FA860</color>
+    <color name="green_light">#2DBF80</color>
+    <color name="green_medium">#1FAE6E</color>
+    <color name="green_accent">#1A9D63</color>
+    <color name="teal_accent">#00D4AA</color>
+
+    <!-- NEW: Neutral Colors -->
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="bg_light_gray">#F5F7FA</color>
+    <color name="text_dark">#1A1A1A</color>
+    <color name="text_dark_gray">#4A4A4A</color>
+    <color name="text_light_gray">#9CA3AF</color>
+    <color name="color_gray">#D1D5DB</color>
+    <color name="gold">#FFA500</color>
+</resources>

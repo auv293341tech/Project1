@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:gravity="center"
+        android:elevation="8dp"
+        android:padding="12dp"
+        >
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/skill_link_logo"
+            android:scaleType="centerCrop"
+            android:contentDescription="SkillLink Logo"
+            android:clipToOutline="true"
+            />
+    </FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Skill Link"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#0F172A"
+        android:gravity="center"/>
+</LinearLayout>

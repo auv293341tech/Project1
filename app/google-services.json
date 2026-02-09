@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "970052797116",
+    "project_id": "skilllink-277e8",
+    "storage_bucket": "skilllink-277e8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970052797116:android:9baf3df20ca786031946b9",
+        "android_client_info": {
+          "package_name": "com.example.project1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiOzpNA8WE_iCehB1Pl0SLEtH7Rp53tXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
